@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {%load static%}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'base/css/header_style.css' %}" />
+    <link rel="icon" href="{% static 'base/img/favicon.png' %}" />
+    <title>Home</title>
+  </head>
+  <body>
+    <header>
+      <img class="logo" src="{% static 'base/img/head.png' %}" alt="logo" />
+    </header>
+
+    <nav class="menu">
+      <div class="menu-item">
+        <a href="index.html"><span class="menu-title">Home</span></a>
+      </div>
+
+      <div class="menu-item">
+        <span class="menu-title">Products</span>
+        <div class="dropdown-content">
+          <a href="html/products/hazelnut.html">Hazelnuts</a>
+          <a href="{% url 'almond'%}">Almond</a>
+          <a href="html/products/strawberry.html">Strawberry</a>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <span class="menu-title">About us</span>
+        <div class="dropdown-content">
+          <a href="html/aboutUs/story.html">Story</a>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <a href="html/peopleWeLove.html">
+          <span class="menu-title">People we love</span>
+        </a>
+      </div>
+    </nav>
+  </body>
+</html>

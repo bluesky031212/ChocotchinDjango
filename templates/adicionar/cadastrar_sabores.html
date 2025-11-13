@@ -1,0 +1,24 @@
+{% include 'base/header.html'%} {%load static%}
+<link
+  rel="stylesheet"
+  href="{% static 'adicionar/css/formulario_style.css'%}"
+/>
+
+<form class="formularios" action="" method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  <h1>Adicione novos sabores!!!</h1>
+  {% if messages %} {% for message in messages %}
+  <div class="sucesso">{{message}}</div>
+  {% endfor %} {% endif %}
+  <h3>Nome do Chocotchin</h3>
+  {{forms.nome_produto}} {{ forms.nome_produto.errors }}
+  <h3>Descrição</h3>
+  {{forms.descricao_produto}} {{ forms.descricao_produto.errors }}
+  <h3>Embalagem</h3>
+  {{forms.embalagem_produto}} {{ forms.embalagem_produto.errors }}
+  <h3>Preço</h3>
+  {{forms.preco_produto}} {{ forms.preco_produto.errors }}
+  <button type="submit">Cadastrar Chocotchin</button>
+</form>
+
+{% include 'base/footer.html'%}

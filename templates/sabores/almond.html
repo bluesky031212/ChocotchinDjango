@@ -1,0 +1,200 @@
+{%include 'base/header.html'%}
+{% load static%}
+<link rel="stylesheet" href="{% static 'sabores/css/almond_style.css'%}">
+    <main class="content">
+        <div style="background-image: url(../../img/background-almond.png);" class="product-description-container">
+            <div class="background-style" style="background-color: rgba(255, 255, 255, 0.6);">
+                <h1>CHOCOTCHIN ALMOND</h1>
+                <div class="product-intro">
+                    <div class="player-overplay">
+                        <div class="player-music">
+  
+                           <div class="personagem-animado personagem-parado"></div> 
+                           <button id="lyrics"></span><img src="../../img/lyrics.png" alt=""></button>
+                                            <div id="janela-modal">
+                                <div class="conteudo-janela">
+                                    <h2>My Beauty Secret</h2>
+                                    <p> </p>
+<p>It's Sunday and the Sunshine asks</p>
+                                    <p>For a day of shopping stacks</p>
+                                    <p>Without make up on that's the past</p>
+                                    <p>With almond chocotchin I don't need masks</p>
+<p> &nbsp;</p>
+                                    <p>Breakfast</p>
+                                    <p>Washing my face is the last step</p>
+                                    <p>Wait, Step back</p>
+                                    <p>Don't forget to snack</p>
+                                    <p>Selenium plus collagen is the match</p>
+                                    <p>Back, back</p>
+                                    <p>A cup of coffee to go with that</p>
+<p>&nbsp; </p>
+                                    <p>Then I take all my Keys,</p>
+                                    <p>I'm driving so free</p>
+                                    <p>Showing off all my energy</p>
+                                    <p>Stealing all the scene</p>
+                                    <p>Maybe I can teach you the recipe</p>
+                                    <p>For your being to be shining</p>
+<p>&nbsp; </p>
+                                    <p>This glamorous skin that you can see</p>
+                                    <p>Let me tell you what I mean</p>
+                                    <p>I could choose between La Roche, Avene or Vichy</p>
+                                    <p>But obviously almond Chocotchin is a must for me</p>
+                                    <p>&nbsp; </p>
+                                    <p>I walk through the mall and I dont know why</p>
+                                    <p>People keep asking me why I'm so fine</p>
+                                    <p>"What's the secret of your beauty, miss?</p>
+                                    <p>That's collagen and almond magic</p>
+                                    <p>&nbsp; </p>
+                                    <p>BoomBox on my car and the radio on</p>
+                                    <p>I'm pretty and everybody wants tips from this blonde</p>
+                                    <p>One bite to selenium make my hair and skin shine like a Diamond</p>
+                                    <p>And just take one look to be blind by them</p>
+                                </div>
+                            </div> 
+
+
+                                       
+<script>
+
+const botaoAbrir = document.getElementById('lyrics');
+const janelaModal = document.getElementById('janela-modal');
+const conteudoJanela = document.querySelector('.conteudo-janela');
+const body = document.body;
+
+botaoAbrir.addEventListener('click', () => {
+  janelaModal.style.display = 'flex';
+  body.classList.add('sem-rolagem');
+});
+
+janelaModal.addEventListener('click', (evento) => {
+  if (!conteudoJanela.contains(evento.target)) {
+    janelaModal.style.display = 'none';
+    body.classList.remove('sem-rolagem');
+  }
+});
+
+// animação dançando do hamster e tocar player de música
+
+document.addEventListener('DOMContentLoaded', function() {
+  const personagem = document.querySelector('.personagem-animado');
+  const audio = new Audio('../../audio/almond.mp3');
+  let isPlaying = false;
+
+  personagem.addEventListener('click', function() {
+    if (isPlaying) {
+      audio.pause();
+      personagem.classList.remove('playing');
+      personagem.classList.add('personagem-parado');
+    } else {
+      audio.play();
+      personagem.classList.remove('personagem-parado');
+      personagem.classList.add('playing');
+    }
+    isPlaying = !isPlaying;
+  });
+
+  audio.addEventListener('ended', function() {
+    isPlaying = false;
+    personagem.classList.remove('playing');
+    personagem.classList.add('personagem-parado');
+  });
+});
+</script>
+
+  </div>
+
+
+                <img class="almond-package" src="../../img/almond-package.png" alt="almond-package" />
+                    </div>
+
+                    <div class="product-intro-text">
+                        <p>
+Chocotchin is a premium protein bar crafted with smooth white chocolate and almond cream, delivering a rich, satisfying flavor that feels like a treat — but works like nutrition. Packed with 20 grams of plant-based protein, it fuels your body while supporting recovery and strength.
+
+                        </p>
+                        <p>
+Infused with Verisol® collagen and selenium, Chocotchin goes beyond the basics to promote healthy skin and hair from within. The almond protein contributes to cellular repair, making this bar a smart choice for beauty-conscious lifestyles and active routines alike.
+
+                        </p>
+                        <p>Whether you're powering through your day or winding down post-workout, Chocotchin is your delicious ally in wellness — indulgent, functional, and unapologetically good.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="image-and-table-container">
+            <div class="product-image-container">
+
+                <img style="width: 400px; height: 610px;" src="../../img/almond_nutri.png" alt="almond_nutri" />
+            </div>
+            <div>
+
+                <div class="nutritional-info">
+                    <h2>Nutritional Information</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Component</th>
+                                <th>Per 90 g</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Energy Value</td>
+                                <td>185 kcal (774 kJ)</td>
+                            </tr>
+                            <tr>
+                                <td>Lipids</td>
+                                <td>11 g</td>
+                            </tr>
+                            <tr>
+                                <td>– of which saturated fatty acids</td>
+                                <td>6 g</td>
+                            </tr>
+                            <tr>
+                                <td>– of which trans fatty acids</td>
+                                <td>0 g</td>
+                            </tr>
+                            <tr>
+                                <td>Carbohydrates</td>
+                                <td>38 g</td>
+                            </tr>
+                            <tr>
+                                <td>– of which sugars</td>
+                                <td>3 g</td>
+                            </tr>
+                            <tr>
+                                <td>– of which polyols</td>
+                                <td>17 g</td>
+                            </tr>
+                            <tr>
+                                <td>– of which added sugars</td>
+                                <td>0 g</td>
+                            </tr>
+                            <tr>
+                                <td>Dietary Fiber</td>
+                                <td>7 g</td>
+                            </tr>
+                            <tr>
+                                <td>Proteins</td>
+                                <td>20 g</td>
+                            </tr>
+                            <tr>
+                                <td>Salt (sodium equivalent)</td>
+                                <td>25 mg</td>
+                            </tr>
+                            <tr>
+                                <td>Verisol® Collagen</td>
+                                <td>2,5 g</td>
+                            </tr>
+                            <tr>
+                                <td>Selenium</td>
+                                <td>100 µg</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+    </main>
+
+    {%include 'base/footer.html'%}

@@ -1,0 +1,26 @@
+.formulario_controle {
+  border: 1px solid black;
+  border-radius: 4px;
+  background-color: #f1e8d9;
+  outline: none;
+  color: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  padding: 3px;
+  margin: 5px;
+  resize: none;
+  text-align: inherit;
+  box-shadow: none;
+  width: 600px;
+}
+
+.formularios {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sucesso {
+  color: green;
+}
