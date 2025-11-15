@@ -24,3 +24,8 @@
 .sucesso {
   color: green;
 }
+
+.botao {
+  margin: 50px;
+  padding: 5px;
+}

@@ -9,16 +9,12 @@
   <h1>Adicione novos sabores!!!</h1>
   {% if messages %} {% for message in messages %}
   <div class="sucesso">{{message}}</div>
-  {% endfor %} {% endif %}
-  <h3>Nome do Chocotchin</h3>
-  {{forms.nome_produto}} {{ forms.nome_produto.errors }}
-  <h3>Descrição</h3>
-  {{forms.descricao_produto}} {{ forms.descricao_produto.errors }}
-  <h3>Embalagem</h3>
-  {{forms.embalagem_produto}} {{ forms.embalagem_produto.errors }}
-  <h3>Preço</h3>
-  {{forms.preco_produto}} {{ forms.preco_produto.errors }}
-  <button type="submit">Cadastrar Chocotchin</button>
+  {% endfor %} {% endif %} {%for i in forms%}
+  <h3>{{i.label_tag}}</h3>
+  {{i}}
+  <div class="erro">{{i.errors}}</div>
+  {%endfor%}
+  <button class="botao" type="submit">Cadastrar Chocotchin</button>
 </form>
 
 {% include 'base/footer.html'%}

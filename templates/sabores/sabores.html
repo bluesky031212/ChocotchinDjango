@@ -1,0 +1,111 @@
+{%include 'base/header.html'%}
+{% load static%}
+<head><style>/* Imagem parada */
+.personagem-parado {
+  background-image: url("{{produto.mascote_parado_produto.url}}");
+  background-size: cover !important; 
+}
+
+/* Animação com spritesheet */
+.personagem-animado.playing {
+  background-image: url("{{produto.mascote_dancando_produto.url}}");
+  animation: animarPersonagem 5s steps(12) infinite;
+  background-size: calc(6672px / 4) auto; /* reduz a spritesheet proporcionalmente */
+}</style></head>
+
+
+<link rel="stylesheet" href="{% static 'sabores/css/almond_style.css'%}">
+    <main class="content">
+     <img class="ingredient" src="{{produto.ingrediente_pendurado_produto.url}}" alt="Chocotchin Almond" />
+        <div style="background-image: url('{{produto.fundo_descricao_produto.url}}');" class="product-description-container">
+            <div class="background-style" style="background-color: rgba(255, 255, 255, 0.6);">
+                <h1>CHOCOTCHIN {{produto.nome_produto}}</h1>
+                <div class="product-intro">
+                    <div class="player-overplay">
+                        <div class="player-music">
+  
+                           <div class="personagem-animado personagem-parado"></div> 
+                           <button id="lyrics"></span><img src="{{produto.mascote_letras_produto.url}}" alt=""></button>
+                                            <div id="janela-modal">
+                                <div class="conteudo-janela">
+                                    <h2>{{produto.titulo_musica_produto}}</h2>
+                                   <pre style="white-space: pre-wrap; font-family: Arial, Helvetica, sans-serif; font-size: 20px;">{{produto.letra_musica_produto}}</pre>
+                                </div>
+                            </div> 
+
+
+                                       
+<script>
+
+const botaoAbrir = document.getElementById('lyrics');
+const janelaModal = document.getElementById('janela-modal');
+const conteudoJanela = document.querySelector('.conteudo-janela');
+const body = document.body;
+
+botaoAbrir.addEventListener('click', () => {
+  janelaModal.style.display = 'flex';
+  body.classList.add('sem-rolagem');
+});
+
+janelaModal.addEventListener('click', (evento) => {
+  if (!conteudoJanela.contains(evento.target)) {
+    janelaModal.style.display = 'none';
+    body.classList.remove('sem-rolagem');
+  }
+});
+
+// animação dançando do hamster e tocar player de música
+
+document.addEventListener('DOMContentLoaded', function() {
+  const personagem = document.querySelector('.personagem-animado');
+  const audio = new Audio('{{produto.musica_produto.url}}');
+  let isPlaying = false;
+
+  personagem.addEventListener('click', function() {
+    if (isPlaying) {
+      audio.pause();
+      personagem.classList.remove('playing');
+      personagem.classList.add('personagem-parado');
+    } else {
+      audio.play();
+      personagem.classList.remove('personagem-parado');
+      personagem.classList.add('playing');
+    }
+    isPlaying = !isPlaying;
+  });
+
+  audio.addEventListener('ended', function() {
+    isPlaying = false;
+    personagem.classList.remove('playing');
+    personagem.classList.add('personagem-parado');
+  });
+});
+</script>
+
+  </div>
+
+
+                <img class="almond-package" src="{{produto.embalagem_produto.url}}" alt="almond-package" />
+                    </div>
+
+                    <div class="product-intro-text">
+                        <pre style="white-space: pre-wrap; font-family: Arial, Helvetica, sans-serif;">{{produto.descricao_produto}}</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="image-and-table-container">
+            <div class="product-image-container">
+
+                <img style="width: 400px; height: 610px;" src="{{produto.barra_produto.url}}" alt="almond_nutri" />
+            </div>
+            <div>
+
+                <div class="nutritional-info">
+                    <img style="width: 400px; height: 610px;" src="{{produto.tabela_nutricional_produto.url}}" alt="">
+                </div>
+            </div>
+    </main>
+
+    {%include 'base/footer.html'%}

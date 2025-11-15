@@ -1,3 +1,273 @@
+/* ;=; */
+
+@font-face {
+  font-family: "titulo";
+  src: url("../font/Nunito-Black.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "corpo";
+  src: url("../font/Quicksand-SemiBold.ttf") format("truetype");
+}
+
+/* body {
+   font-family: "corpo", sans-serif;
+} */
+
+h1,
+h2,
+h3 {
+  font-family: "titulo", serif;
+  font-weight: bolder;
+  text-transform: uppercase;
+  /* Fonte para os títulos */
+}
+
+/* Estilos para o conteúdo principal */
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  max-width: 1200px;
+  /* Mantém a largura máxima para o conteúdo principal */
+  margin: 0 auto;
+  /* Centraliza o contêiner do conteúdo */
+}
+
+.almond-package {
+  border: none;
+  width: 350px;
+  height: auto;
+  border-radius: 10px;
+  /* Adiciona cantos arredondados à imagem do produto */
+}
+
+.product-description-container {
+  background-size: cover;
+  /* Faz a imagem cobrir toda a área */
+  background-position: center;
+  /* Centraliza a imagem */
+  padding: 2rem;
+  border-radius: 50px;
+  border: #4f280ba4;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-top: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.background-style {
+  padding: 2rem;
+  /* Adicionado para dar espaço interno à caixa de texto */
+  border-radius: 20px;
+  /* Bordas arredondadas para a caixa de texto */
+}
+
+.product-description-container h1 {
+  font-size: 2.5rem;
+  color: #4f280b;
+  margin: 0px;
+}
+
+.product-description {
+  /* Novo wrapper para os parágrafos */
+  max-width: 800px;
+  /* Controla a largura dos parágrafos */
+  margin: 0 auto 1.5rem;
+  /* Centraliza e adiciona margem */
+}
+
+.product-description p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #666;
+  text-align: center;
+  /* Centraliza o texto */
+  margin-bottom: 1rem;
+}
+
+.hazelnut-package {
+  height: 100px;
+  /* Mantém o tamanho da imagem da embalagem */
+  width: auto;
+  margin: 2rem auto;
+}
+
+.product-intro {
+  display: flex;
+  /* A magia do Flexbox! */
+  align-items: center;
+  /* Alinha verticalmente a imagem e o texto */
+  gap: 2rem;
+  /* Espaço entre a imagem e o texto */
+  margin-top: 2rem;
+  /* Espaço abaixo do título h1 */
+  text-align: left;
+  /* Alinhar o texto à esquerda fica mais fácil de ler */
+}
+
+.product-intro-image {
+  flex: 1;
+  /* A imagem ocupa uma parte do espaço */
+}
+
+.product-intro-text {
+  font-size: 20px;
+  color: #452e1c;
+  flex: 2;
+  /* O texto ocupa duas partes, um pouco mais de espaço */
+}
+
+.hazelnut-package {
+  max-width: 100%;
+  /* Garante que a imagem não ultrapasse seu contêiner */
+  height: auto;
+  border-radius: 10px;
+  /* Adiciona cantos arredondados à imagem do produto */
+}
+
+/* ---------------------------------- */
+/* ESTILOS PARA IMAGEM DO PRODUTO E TABELA NUTRICIONAL */
+/* ---------------------------------- */
+
+.image-and-table-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px;
+  margin-top: 30px;
+  background-color: #fff;
+  /* Fundo branco para o card da imagem */
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product-image-container {
+  position: relative; /* Essencial para que o player seja posicionado em relação a este container */
+  height: 650px;
+  width: 420px;
+  padding: 1rem;
+  /* Espaçamento interno para a imagem */
+
+  display: flex;
+  /* Transforma em flexbox para centralizar a imagem dentro dele */
+  justify-content: center;
+  align-items: center;
+}
+
+.product-image-container img {
+  max-width: 100%;
+  /* A imagem ocupa 100% do seu contêiner, respeitando o max-width do .product-image-container */
+  height: auto;
+  border-radius: 8px;
+  /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); - Removido aqui para evitar sombra dupla se o pai já tem */
+}
+.nutritional-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  position: center;
+  width: 400px;
+  height: 610px;
+  /* Limita a largura máxima da tabela */
+  padding-left: 1rem;
+  padding-right: 2rem;
+}
+
+.nutritional-info h2 {
+  color: #4f280b;
+  font-size: 1.8rem;
+  margin: 2rem;
+  text-align: center;
+}
+
+.nutritional-info table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.nutritional-info th,
+.nutritional-info td {
+  font-size: 17px;
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  color: #833711;
+}
+
+.nutritional-info th {
+  background-color: #f1e8d9;
+  font-weight: bold;
+}
+
+.nutritional-info tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.nutritional-info td:first-child {
+  font-weight: 500;
+}
+
+/* Media query para telas menores (mantendo o comportamento vertical) */
+@media (max-width: 900px) {
+  .image-and-table-container {
+    flex-direction: column;
+    /* Coloca os itens em coluna em telas menores */
+    align-items: center;
+    /* Centraliza os itens */
+  }
+
+  .product-image-container,
+  .nutritional-info {
+    width: 90%;
+    /* Ajusta a largura para ocupar mais espaço em telas menores */
+    max-width: none;
+    /* Remove o limite de largura máxima em telas menores */
+  }
+}
+
+/* Avelã dos infernos */
+
+.ingredient {
+  background-attachment: fixed;
+
+  position: fixed;
+  /* Posição fixa em relação à janela do navegador */
+  top: 20px;
+  /* Distância de 20px do topo */
+  left: 20px;
+  /* Distância de 20px da esquerda */
+  height: 60px;
+  /* Altura da imagem */
+  width: auto;
+  /* Largura automática para manter a proporção */
+  z-index: 1001;
+  /* Garante que a imagem fique por cima de tudo (o seu menu é 100) */
+  pointer-events: none;
+  /* Permite clicar através da imagem */
+  opacity: 0.8;
+  /* Opacidade para não atrapalhar a visualização */
+  transition: transform 0.3s ease;
+  /* Animação suave ao mover */
+}
+
+/* ;-; */
+
+.content {
+  flex: 1;
+  padding: 2rem;
+  text-align: center;
+  background-color: #f1e8d9;
+}
+
 #janela-modal {
   padding-top: 150px;
   display: none;
@@ -79,19 +349,6 @@
   background-repeat: no-repeat;
   background-size: calc(6672px / 4) auto; /* escala proporcional da spritesheet */
   cursor: pointer;
-}
-
-/* Imagem parada */
-.personagem-parado {
-  background-image: url("../img/taylor-dancep.png");
-  background-size: cover;
-}
-
-/* Animação com spritesheet */
-.personagem-animado.playing {
-  background-image: url("../img/taylor-dance.png");
-  animation: animarPersonagem 5s steps(12) infinite;
-  background-size: calc(6672px / 4) auto; /* reduz a spritesheet proporcionalmente */
 }
 
 @keyframes animarPersonagem {

@@ -1,6 +1,7 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .forms import SaboresForm
 from django.contrib import messages
+from .models import SaboresModel
 
 
 # Create your views here.
@@ -18,5 +19,6 @@ def cadastrar_sabores(request):
     return render(request, "adicionar/cadastrar_sabores.html", contexto)
 
 
-def almond(request):
-    return render(request, "sabores/almond.html")
+def sabores(request, id):
+    contexto = get_object_or_404(SaboresModel, id=id)
+    return render(request, "sabores/sabores.html", {"produto":contexto})

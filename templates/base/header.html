@@ -15,15 +15,15 @@
 
     <nav class="menu">
       <div class="menu-item">
-        <a href="index.html"><span class="menu-title">Home</span></a>
+        <a href="{% url 'home'%}"><span class="menu-title">Home</span></a>
       </div>
 
       <div class="menu-item">
         <span class="menu-title">Products</span>
         <div class="dropdown-content">
-          <a href="html/products/hazelnut.html">Hazelnuts</a>
-          <a href="{% url 'almond'%}">Almond</a>
-          <a href="html/products/strawberry.html">Strawberry</a>
+          {% for sabor in produtos_nav%}
+          <a href="{% url 'sabores' sabor.id%}">{{sabor.nome_produto|lower}}</a>
+          {%endfor%}
         </div>
       </div>
 
