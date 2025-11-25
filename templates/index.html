@@ -1,6 +1,7 @@
 {% include "base/header.html"%} {%load static%}
 <head>
   <link rel="stylesheet" href="{% static 'index/css/index_style.css'%}" />
+  <title>Home - Chocotchin</title>
 </head>
 <body>
   <main>
@@ -18,41 +19,14 @@
     <section id="featured-products" class="featured-products-section">
       <h2 class="section-title">Favorites</h2>
       <div class="products-grid">
+        {%for produto in produtos%}
         <div class="product-card">
-          <img
-            src="{% static 'index/img/hazelnut-packages.png' %}"
-            alt="Chocotchin de Avelã"
-          />
-          <h3>Chocotchin Hazelnut</h3>
-          <p>
-            The classic and irresistible combination of creamy chocolate with
-            crunchy hazelnuts.
-          </p>
-          <a href="html/products/hazelnut.html" class="product-btn">More</a>
+          <img src="{{produto.embalagem_produto.url}}" alt="Embalagem" />
+          <h3>{{produto.nome_produto}}</h3>
+          <p>{{produto.descricao_produto_pequena}}</p>
+          <a href="{% url 'sabores' produto.id %}" class="product-btn">More</a>
         </div>
-        <div class="product-card">
-          <img
-            src="{% static 'index/img/almond-package.png' %}"
-            alt="Chocotchin de Amêndoa"
-          />
-          <h3>Chocotchin Almond</h3>
-          <p>
-            The elegance of roasted almonds wrapped in our premium chocolate.
-          </p>
-          <a href="html/products/almond.html" class="product-btn">More</a>
-        </div>
-        <div class="product-card">
-          <img
-            src="{% static 'index/img/strawberry-package.png' %}"
-            alt="Chocotchin de Morango"
-          />
-          <h3>Chocotchin Strawberry</h3>
-          <p>
-            An explosion of flavor with freeze-dried strawberry pieces and white
-            chocolate.
-          </p>
-          <a href="html/products/strawberry.html" class="product-btn">More</a>
-        </div>
+        {% endfor %}
       </div>
     </section>
 
@@ -79,7 +53,7 @@
       <div class="ratings-grid">
         <div class="rating-card">
           <img
-            src="{% static 'index/img/bolsomster.png' %}"
+            src="{% static 'index/img/bolsomster.jpg' %}"
             alt="Foto do Cliente 1"
             class="customer-photo"
           />
@@ -95,7 +69,7 @@
         </div>
         <div class="rating-card">
           <img
-            src="{% static 'index/img/Edimster.png' %}"
+            src="{% static 'index/img/Edimster.jpg' %}"
             alt="Foto do Cliente 2"
             class="customer-photo"
           />
@@ -111,7 +85,7 @@
         </div>
         <div class="rating-card">
           <img
-            src="{% static 'index/img/alexanmster.png' %}"
+            src="{% static 'index/img/alexanmster.jpg' %}"
             alt="Foto do Cliente 3"
             class="customer-photo"
           />

@@ -96,13 +96,6 @@ header {
   border-radius: 5px;
 }
 
-.content {
-  flex: 1;
-  padding: 2rem;
-  text-align: center;
-  background-color: #f1e8d9;
-}
-
 a {
   text-decoration: none;
 }

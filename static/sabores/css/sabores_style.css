@@ -1,0 +1,378 @@
+/* ;=; */
+
+@font-face {
+  font-family: "titulo";
+  src: url("../font/Nunito-Black.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "corpo";
+  src: url("../font/Quicksand-SemiBold.ttf") format("truetype");
+}
+
+/* body {
+   font-family: "corpo", sans-serif;
+} */
+
+h1,
+h2,
+h3 {
+  font-family: "titulo", serif;
+  font-weight: bolder;
+  text-transform: uppercase;
+  /* Fonte para os títulos */
+}
+
+/* Estilos para o conteúdo principal */
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  max-width: 1200px;
+  /* Mantém a largura máxima para o conteúdo principal */
+  margin: 0 auto;
+  /* Centraliza o contêiner do conteúdo */
+}
+
+.almond-package {
+  border: none;
+  width: 350px;
+  height: auto;
+  border-radius: 10px;
+  /* Adiciona cantos arredondados à imagem do produto */
+}
+
+.product-description-container {
+  background-size: cover;
+  /* Faz a imagem cobrir toda a área */
+  background-position: center;
+  /* Centraliza a imagem */
+  padding: 2rem;
+  border-radius: 50px;
+  border: #4f280ba4;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-top: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.background-style {
+  padding: 2rem;
+  /* Adicionado para dar espaço interno à caixa de texto */
+  border-radius: 20px;
+  /* Bordas arredondadas para a caixa de texto */
+}
+
+.product-description-container h1 {
+  font-size: 2.5rem;
+  color: #4f280b;
+  margin: 0px;
+}
+
+.product-description {
+  /* Novo wrapper para os parágrafos */
+  max-width: 800px;
+  /* Controla a largura dos parágrafos */
+  margin: 0 auto 1.5rem;
+  /* Centraliza e adiciona margem */
+}
+
+.product-description p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #666;
+  text-align: center;
+  /* Centraliza o texto */
+  margin-bottom: 1rem;
+}
+
+.hazelnut-package {
+  height: 100px;
+  /* Mantém o tamanho da imagem da embalagem */
+  width: auto;
+  margin: 2rem auto;
+}
+
+.product-intro {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.product-intro-image {
+  flex: 1;
+}
+
+.product-intro-text {
+  font-size: 20px;
+  color: #452e1c;
+  flex: 2;
+}
+
+.product-intro-text pre {
+  white-space: pre-wrap;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: justify;
+}
+
+.hazelnut-package {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* ---------------------------------- */
+/* ESTILOS PARA IMAGEM DO PRODUTO E TABELA NUTRICIONAL */
+/* ---------------------------------- */
+
+.image-and-table-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px;
+  margin-top: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product-image-container {
+  position: relative;
+  height: 650px;
+  width: 420px;
+  padding: 1rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-image-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.nutritional-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  position: center;
+  width: 400px;
+  height: 610px;
+  padding-left: 1rem;
+  padding-right: 2rem;
+}
+
+.nutritional-info h2 {
+  color: #4f280b;
+  font-size: 1.8rem;
+  margin: 2rem;
+  text-align: center;
+}
+
+.nutritional-info table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.nutritional-info th,
+.nutritional-info td {
+  font-size: 17px;
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  color: #833711;
+}
+
+.nutritional-info th {
+  background-color: #f1e8d9;
+  font-weight: bold;
+}
+
+.nutritional-info tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.nutritional-info td:first-child {
+  font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  .image-and-table-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-image-container,
+  .nutritional-info {
+    width: 90%;
+    max-width: none;
+  }
+}
+
+/* Avelã dos infernos */
+
+.ingredient {
+  background-attachment: fixed;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  height: 60px;
+  width: auto;
+  z-index: 999;
+  pointer-events: none;
+  opacity: 0.8;
+  transition: transform 0.3s ease;
+}
+
+/* ;-; */
+
+.content {
+  flex: 1;
+  padding: 2rem;
+  text-align: center;
+  background-color: #f1e8d9;
+}
+
+#janela-modal {
+  padding-top: 5vh;
+  padding-bottom: 10vh;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: none;
+  max-height: fit-content;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+}
+
+.sem-rolagem {
+  overflow: hidden;
+}
+
+.conteudo-janela {
+  background-image: url("../img/lyrics-background.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  text-align: center;
+  color: #333;
+  width: 40vh;
+  height: 68vh;
+  padding: 12vh 20vh;
+}
+
+.conteudo-janela h2 {
+  padding-top: 0;
+  margin: 1vh;
+  color: #4f280b;
+}
+
+.conteudo-janela p {
+  margin: 0;
+}
+
+.box-letra {
+  height: 60vh;
+  padding-right: 2vh;
+  overflow-y: auto;
+}
+
+/* Estilo da barra */
+.box-letra::-webkit-scrollbar {
+  width: 10px; /* largura da barra */
+}
+
+/* Fundo da barra */
+.box-letra::-webkit-scrollbar-track {
+  background: #f4e1c1; /* cor do trilho */
+  border-radius: 10px;
+}
+
+/* Cor do scroll */
+.box-letra::-webkit-scrollbar-thumb {
+  background: #a67c52; /* cor do "polegar" */
+  border-radius: 10px;
+}
+
+/* Hover no scroll */
+.box-letra::-webkit-scrollbar-thumb:hover {
+  background: #8b5e34;
+}
+
+.conteudo-janela pre {
+  margin: 0;
+  white-space: pre-wrap;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  word-wrap: break-word;
+}
+
+.player-overplay {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.player-music {
+  display: flex; /* coloca as divs lado a lado */
+}
+
+#lyrics {
+  border: none;
+  padding: 0px;
+  box-sizing: border-box;
+  background-color: transparent;
+  cursor: pointer;
+  height: calc(486px / 4); /* metade da altura */
+  width: calc(556px / 4); /* metade da largura de um frame */
+  /* Posicionamento para o elemento filho */
+  position: relative;
+  overflow: hidden; /* Garante que o span não "vaze" para fora do botão */
+}
+
+#lyrics img {
+  cursor: pointer;
+  height: calc(486px / 4); /* metade da altura */
+}
+
+.personagem-animado {
+  width: calc(556px / 4); /* metade da largura de um frame */
+  height: calc(486px / 4); /* metade da altura */
+  background-repeat: no-repeat;
+  background-size: calc(6672px / 4) auto; /* escala proporcional da spritesheet */
+  background-position: center;
+  cursor: pointer;
+}
+
+.personagem-parado img {
+  position: center;
+  width: calc(556px / 4); /* metade da largura de um frame */
+  height: calc(486px / 4); /* metade da altura */
+}
+
+@keyframes animarPersonagem {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: calc(-6672px / 4) 0;
+  }
+}

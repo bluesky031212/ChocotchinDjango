@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="{% static 'base/css/header_style.css' %}" />
     <link rel="icon" href="{% static 'base/img/favicon.png' %}" />
-    <title>Home</title>
+    <link rel="stylesheet" href="{% static 'base/css/responsive.css'%}" />
   </head>
   <body>
     <header>
@@ -19,7 +19,11 @@
       </div>
 
       <div class="menu-item">
-        <span class="menu-title">Products</span>
+        <span class="menu-title"
+          >Products
+          <div class="menu_responsivo">
+            <i class="fa-solid fa-caret-down"></i></div
+        ></span>
         <div class="dropdown-content">
           {% for sabor in produtos_nav%}
           <a href="{% url 'sabores' sabor.id%}">{{sabor.nome_produto|lower}}</a>
@@ -28,14 +32,18 @@
       </div>
 
       <div class="menu-item">
-        <span class="menu-title">About us</span>
+        <span class="menu-title"
+          >About us
+          <div class="menu_responsivo">
+            <i class="fa-solid fa-caret-down"></i></div
+        ></span>
         <div class="dropdown-content">
-          <a href="html/aboutUs/story.html">Story</a>
+          <a href="{% url 'story'%}">Story</a>
         </div>
       </div>
 
       <div class="menu-item">
-        <a href="html/peopleWeLove.html">
+        <a href="{%url 'people_we_love'%}">
           <span class="menu-title">People we love</span>
         </a>
       </div>

@@ -16,6 +16,7 @@ class SaboresModel(models.Model):
     letra_musica_produto = models.TextField()
     musica_produto = models.FileField(upload_to="sabores/musica", null=True, blank=True)
     descricao_produto = models.TextField()
+    descricao_produto_pequena = models.TextField()
     preco_produto = models.FloatField()
 
     def __str__(self):

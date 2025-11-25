@@ -1,9 +1,42 @@
 {%include 'base/header.html'%}
 {% load static%}
-<head><style>/* Imagem parada */
+
+<head>
+  <title>{{produto.nome_produto|title}} - Chocotchin</title>
+  
+
+{% if produto.nome_produto|lower == "strawberry"%}
+<style>
+body{
+  background-image:url("{% static 'sabores/img/motivation.png'%}") ;
+}
+
+</style>
+{%endif%}
+
+{% if produto.nome_produto|lower == "cherry"%}
+<style>
+body{
+  background-image:url("{% static 'sabores/img/cherry.jpg'%}") ;
+  background-size: 50%;
+  background-repeat: repeat;
+}
+.content{
+  border
+}
+
+
+</style>
+{%endif%}
+
+
+
+  <style>
+
+
 .personagem-parado {
   background-image: url("{{produto.mascote_parado_produto.url}}");
-  background-size: cover !important; 
+  background-size: contain !important; 
 }
 
 /* Animação com spritesheet */
@@ -14,7 +47,7 @@
 }</style></head>
 
 
-<link rel="stylesheet" href="{% static 'sabores/css/almond_style.css'%}">
+<link rel="stylesheet" href="{% static 'sabores/css/sabores_style.css'%}">
     <main class="content">
      <img class="ingredient" src="{{produto.ingrediente_pendurado_produto.url}}" alt="Chocotchin Almond" />
         <div style="background-image: url('{{produto.fundo_descricao_produto.url}}');" class="product-description-container">
@@ -29,7 +62,9 @@
                                             <div id="janela-modal">
                                 <div class="conteudo-janela">
                                     <h2>{{produto.titulo_musica_produto}}</h2>
-                                   <pre style="white-space: pre-wrap; font-family: Arial, Helvetica, sans-serif; font-size: 20px;">{{produto.letra_musica_produto}}</pre>
+                                    <div class="box-letra">
+                                   <pre >{{produto.letra_musica_produto}}</pre>
+                                   </div>
                                 </div>
                             </div> 
 
@@ -89,7 +124,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
 
                     <div class="product-intro-text">
-                        <pre style="white-space: pre-wrap; font-family: Arial, Helvetica, sans-serif;">{{produto.descricao_produto}}</pre>
+                        <pre>{{produto.descricao_produto}}</pre>
                     </div>
                 </div>
             </div>

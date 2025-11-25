@@ -23,7 +23,10 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", views.index, name="home" ),
-    path("sabores/", include("sabores.urls"))
+    path("sabores/", include("sabores.urls")),
+    path("story/", views.story, name="story"),
+    path("people_we_love/", views.people_we_love, name="people_we_love")     
+    
 ]
 
 if settings.DEBUG:
