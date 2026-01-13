@@ -149,22 +149,6 @@ footer {
   margin: 0 auto; /* Center the text block */
 }
 
-/* Media Queries for Responsiveness */
-@media (min-width: 768px) {
-  .humor-content-wrapper {
-    flex-direction: row; /* Image and text side-by-side on larger screens */
-    gap: 30px; /* Space between image and text */
-  }
-
-  .humor-image {
-    margin-bottom: 0; /* Remove bottom margin when side-by-side */
-  }
-
-  .humor-text {
-    text-align: left; /* Align text left when next to image */
-  }
-}
-
 /* --- CSS para a Seção de Avaliações de Clientes --- */
 
 .ratings-section {
@@ -243,26 +227,6 @@ footer {
 }
 
 /* --- Responsividade para a Seção de Avaliações --- */
-
-@media (max-width: 900px) {
-  .rating-card {
-    width: calc(50% - 30px); /* 2 cards por linha em telas médias */
-  }
-}
-
-@media (max-width: 600px) {
-  .rating-card {
-    width: 100%; /* 1 card por linha em telas pequenas */
-    flex-direction: column; /* Imagem fica em cima do texto */
-    align-items: center; /* Centraliza tudo no modo coluna */
-    text-align: center;
-  }
-
-  .customer-photo {
-    margin-right: 0;
-    margin-bottom: 15px; /* Espaço entre a foto e o nome */
-  }
-}
 
 /* --- ESTILOS ADICIONAIS PARA A NOVA HOMEPAGE --- */
 
@@ -401,26 +365,6 @@ main > section {
 }
 
 /* --- Ajustes de Responsividade para as Novas Seções --- */
-@media (max-width: 900px) {
-  .hero-content h1 {
-    font-size: 2.5em;
-  }
-  .product-card {
-    width: calc(50% - 30px);
-  }
-}
-
-@media (max-width: 600px) {
-  .hero-content h1 {
-    font-size: 2em;
-  }
-  .hero-content p {
-    font-size: 1.1em;
-  }
-  .product-card {
-    width: 100%;
-  }
-}
 
 .chocotchin-humor-section,
 .ratings-section {
@@ -473,14 +417,4 @@ body.center-vertically .content {
   flex-direction: column;
   justify-content: center; /* Vertically aligns the content */
   align-items: center; /* Horizontally aligns the content */
-}
-
-/* --- Media Query for Story Page on Small Screens --- */
-@media (max-width: 600px) {
-  .story-text {
-    padding: 30px;
-  }
-  .story-text h1 {
-    font-size: 2em;
-  }
 }

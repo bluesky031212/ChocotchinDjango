@@ -38,6 +38,7 @@
     flex-wrap: wrap;
     align-items: center;
     height: auto;
+    width: 100%;
     padding: 10px 0;
   }
 
@@ -52,7 +53,7 @@
     border-radius: 15px;
     margin: 2.5px;
     margin-left: 10px;
-    width: 80%;
+    width: 70%;
   }
 
   .menu_responsivo {
@@ -133,10 +134,27 @@
   /* Conteúdo geral da página de produto */
   main.content {
     padding: 1rem;
+    width: 90% !important;
   }
 
   .product-description-container h1 {
-    font-size: 2rem;
+    font-size: 2rem !important;
+    margin: 10px !important;
+  }
+
+  .conteudo-janela pre {
+    font-size: 10px !important;
+    height: 280px;
+  }
+
+  .product-description-container {
+    margin: 10px;
+    width: 90% !important;
+  }
+
+  .box-letra {
+    height: 90% !important;
+    padding-left: 5vw;
   }
 
   /* Seção de introdução (player + imagem da embalagem + texto) */
@@ -161,47 +179,49 @@
   /* Seção da Tabela Nutricional */
   .image-and-table-container {
     flex-direction: column;
+    align-content: center !important;
     align-items: center;
     margin-top: 20px;
+    width: 90% !important;
   }
 
   /* Corrige a imagem com tamanho fixo inline */
   .product-image-container img[style] {
-    width: 100% !important;
+    width: 90% !important;
     max-width: 320px;
     height: auto !important;
     margin-bottom: 20px;
   }
 
   .nutritional-info {
-    width: 100%;
+    width: 90% !important;
     min-width: unset;
     padding: 0;
   }
 
-  .nutritional-info table {
-    font-size: 0.9em;
+  .nutritional-info img {
+    height: 70% !important;
   }
 
   /* --- Janela Modal das Letras de Música --- */
   #janela-modal {
-    padding: 20px 0; /* Espaço para rolagem */
+    padding: 23vh 0 !important; /* Espaço para rolagem */
     align-items: flex-start; /* Alinha no topo para ver o início */
   }
 
   .conteudo-janela {
     width: 95vw !important; /* Ocupa 95% da largura da tela */
-    height: auto !important; /* Altura automática */
+    height: 54% !important; /* Altura automática */
     min-height: unset !important;
     margin: 0 auto !important;
-    padding: 25% 10% 15% 10% !important; /* Ajusta o padding para caber o texto */
-    background-size: 100% 100%; /* Estica o pergaminho para caber */
+    padding: 18% 10% 18% 10% !important; /* Ajusta o padding para caber o texto */
+    background-size: 150% 100%; /* Estica o pergaminho para caber */
     font-size: 14px;
     box-sizing: border-box;
   }
 
   .conteudo-janela h2 {
-    font-size: 1.5em;
+    font-size: 1em;
   }
 
   .conteudo-janela p {
@@ -222,5 +242,78 @@
 
   .story-text {
     padding: 25px;
+  }
+}
+
+/* Media Queries for Responsiveness */
+@media (min-width: 768px) {
+  .humor-content-wrapper {
+    flex-direction: row; /* Image and text side-by-side on larger screens */
+    gap: 30px; /* Space between image and text */
+  }
+
+  .humor-image {
+    margin-bottom: 0; /* Remove bottom margin when side-by-side */
+  }
+
+  .humor-text {
+    text-align: left; /* Align text left when next to image */
+  }
+}
+
+/* --- Media Query for Story Page on Small Screens --- */
+@media (max-width: 600px) {
+  .story-text {
+    padding: 30px;
+  }
+  .story-text h1 {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-content h1 {
+    font-size: 2.5em;
+  }
+  .product-card {
+    width: calc(50% - 30px);
+  }
+
+  .background-style {
+    border-radius: 20px;
+    /* Bordas arredondadas para a caixa de texto */
+    width: 85% !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-content h1 {
+    font-size: 2em;
+  }
+  .hero-content p {
+    font-size: 1.1em;
+  }
+  .product-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .rating-card {
+    width: calc(50% - 30px); /* 2 cards por linha em telas médias */
+  }
+}
+
+@media (max-width: 600px) {
+  .rating-card {
+    width: 100%; /* 1 card por linha em telas pequenas */
+    flex-direction: column; /* Imagem fica em cima do texto */
+    align-items: center; /* Centraliza tudo no modo coluna */
+    text-align: center;
+  }
+
+  .customer-photo {
+    margin-right: 0;
+    margin-bottom: 15px; /* Espaço entre a foto e o nome */
   }
 }
